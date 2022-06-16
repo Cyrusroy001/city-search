@@ -1,0 +1,36 @@
+<%- include("header") -%>
+
+<div class="parent">
+  <div class="child">
+    <form action="/" method="post">
+      <input
+        type="text"
+        name="city"
+        id="city-name"
+        placeholder="Type 'Kathmandu'"
+        autocomplete="off"
+        size="40"
+      />
+      <button type="submit" class="btn btn-primary btn-lg">GO</button>
+    </form>
+  </div>
+</div>
+
+<% if (showData) { %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="box">
+      <img class="cropped" src="<%= city.image %>" alt="cityImage" />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="text-box">
+      <p>City: <%= city.name %></p>
+      <p>Country: <%= city.country %></p>
+      <p>Area: <%= city.area %></p>
+      <p>Population: <%= city.population %></p>
+    </div>
+  </div>
+</div>
+
+<% } %> <%- include("footer") -%>

@@ -1,0 +1,15 @@
+<%- include("header") -%>
+
+<div class="failure-box">
+  <h1>FAILURE</h1>
+  <p>"<%= name %>" not found in the database.</p>
+  <p>Please try again with a different city name.</p>
+</div>
+
+<center>
+  <form action="/" method="get">
+    <button type="submit" class="btn btn-primary btn-lg">Try Again</button>
+  </form>
+</center>
+
+<%- include("footer") -%>
