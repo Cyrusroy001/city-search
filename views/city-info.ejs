@@ -1,5 +1,6 @@
 <%- include("header") -%>
 
+<!-- this part will be always shown -->
 <div class="parent">
   <div class="child">
     <form action="/" method="post">
@@ -7,15 +8,17 @@
         type="text"
         name="city"
         id="city-name"
-        placeholder="Type 'Kathmandu'"
+        placeholder="Enter a city name"
         autocomplete="off"
         size="40"
+        required
       />
       <button type="submit" class="btn btn-primary btn-lg">GO</button>
     </form>
   </div>
 </div>
 
+<!-- this part will only be shown when seached city is present in DB -->
 <% if (showData) { %>
 <div class="row">
   <div class="col-md-4">
@@ -32,5 +35,6 @@
     </div>
   </div>
 </div>
+<% } %> 
 
-<% } %> <%- include("footer") -%>
+<%- include("footer") -%>
