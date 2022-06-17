@@ -62,7 +62,11 @@ app.post("/", function(req, res) {
     });
 })
 
-// listen method at localhost:3000
-app.listen(3000, function () {
+// listen method at localhost:3000 or heroku's server
+let port = process.env.PORT;
+if(port == null || port == "") {
+    port = 3000;
+}
+app.listen(port, function () {
     console.log("Server running on port 3000");
 });
